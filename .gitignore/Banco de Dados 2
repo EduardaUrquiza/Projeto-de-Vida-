@@ -1,0 +1,71 @@
+criar db_biblioteca de banco de dados;
+
+db_biblioteca de uso; 
+
+criar tbl_autor de mesa(
+id_autor inteiro auto_increment chave primária,
+sobrenome varchar(100) não nulo,
+nome varchar(30)
+);
+
+criar tbl_editora de mesa(
+id_editora chave principal auto_increment inteiro,
+nome varchar(50) não nulo
+);
+
+criar tbl_categoria de mesa(
+id_categoria chave principal do inteiro auto_increment
+);
+
+criar tbl_livro de mesa(
+id_livro inteiro auto_increment chave primária, 
+nome varchar(50) não nulo,
+data_publicacao data não é nula, 
+isbn varchar(10) não nulo,
+numero_paginas varchar(10) não é nulo,
+id_editora inteiro não é nulo,
+preco_livro decimal não é nulo,
+ restrição fk_livro_editora referências de id_editora (id_editora) tbl_editora (id_editora),
+id_autor inteiro não é nulo,
+ restrição fk_livro_autor referências de chave estrangeira (id_autor) tbl_autor (id_autor),
+id_categoria inteiro não é nulo,
+ restrições fk_livro_categoria referências de id_categoria de tecla estrangeira (id_categoria) tbl_categoria (id_categoria)
+);
+
+alterar tabela tbl_categoria adicionar nome varchar(50) após id_categoria; 
+
+alterar tbl_livro tabela
+modificar coluna isbn varchar(20) não nulo;
+
+inserir em valores tbl_autor (sobrenome, nome) ("MAURO DE VASCONCELOS", " José");
+inserir em valores tbl_autor (sobrenome, nome) ("DE ASSIS", "Machado");
+inserir em valores tbl_autor (sobrenome, nome) ("FRANK", "Anne");
+
+selecionar * a partir de tbl_autor;
+
+inserir em valores tbl_categoria(nome) ("Romance juvenil");
+inserir em valores tbl_categoria(nome) ("Romance imprecionista");
+inserir em valores de tbl_categoria(nome) ("Bibliografia");
+
+selecionar * a partir de tbl_categoria;
+
+inserir em valores de tbl_editora(nome) ("Melhoramentos");
+inserir em valores de tbl_editora(nome) ("Livraria Garnier");
+inserir em valores de tbl_editora(nome) (" Publicação de Contato");
+
+selecionar * a partir de tbl_editora;
+
+alterar tbl_livro tabela
+modificar coluna data_publicacao ano não nulo;
+
+alterar tbl_livro tabela
+modificar coluna preco_livro flutuar não nulo;
+
+inserir em tbl_livro (nome, data_publicacao, isbn, numero_paginas, id_editora, preco_livro, id_autor, id_categoria)
+valores ("Meu pé de laranja lima", "1968", "978-972-8202-29-3", "193",1,19,1,1);
+inserir em tbl_livro (nome, data_publicacao, isbn, numero_paginas, id_editora, preco_livro, id_autor, id_categoria)
+valores ("Dom Casmurro", "1968","849-443-332-345-23", "1899",2,20,67,2,2);
+inserir em tbl_livro (nome, data_publicacao, isbn, numero_paginas, id_editora, preco_livro, id_autor, id_categoria)
+valores ("O diario de Anne Frenk", "1947","345-654-234-56", "342",3,78,4,3,2);
+
+selecionar * a partir de tbl_livro;
