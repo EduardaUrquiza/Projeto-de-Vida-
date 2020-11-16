@@ -1,0 +1,31 @@
+<! DOCTYPE html>
+<Html>
+    <Cabeça>
+        <meta charset="utf-8">
+        <título>Lista de Compras</título>
+        
+    </Cabeça>
+    <Corpo>
+        
+        <h1>Lista de compras</h1>
+        <Br>
+        <p>Produtos de cesta básica</p>
+        <!-- Numeral ->
+        <Ol>
+            <li>Arroz</li>
+            <li>Feijão</li>
+            <li>Maracarrão</li>
+            <li>Adoçante</li>
+            <li>Farinha de Trigo</li>
+          </Ol>
+          <!-- Quadrado -->
+          <p>Produtos de Higiene Pessoal</p>
+          <Ul>
+            <li style="list-style-type:square"> Shampoo</li>
+            <li style="list-style-type:square">Sabonete</li>
+            <li style="list-style-type:square">Cottonet</li>
+            <li style="list-style-type:square">Algodão</li>
+            <li style="list-style-type:square">Desodorante</li>
+          </Ul>
+    </Corpo>
+</Html>
